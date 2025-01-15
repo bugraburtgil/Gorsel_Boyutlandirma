@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Programlama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b173d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #f9f8f8;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #555;
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #d50606;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        button:hover {
+            background-color: #791b1b;
+        }
+
+        input[type="file"] {
+            padding: 5px;
+        }
+
+        footer {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .bi-download {
+            font-size: 16px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Görüntü Boyutlandırma ve Ölçeklendirme</h1>
+       
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="image">Görsel Seç:</label>
+            <input type="file" name="image" id="image" accept="image/jpeg" required><br>
+
+            <label for="width">Genişlik:</label>
+            <input type="number" name="width" id="width" min="1" required><br>
+
+            <label for="height">Yükseklik:</label>
+            <input type="number" name="height" id="height" min="1" required><br>
+
+            <label for="keep_aspect_ratio">En-boy oranını koru:</label>
+            <input type="checkbox" name="keep_aspect_ratio" id="keep_aspect_ratio"><br>
+
+            <label for="quality">Kalite Seç (1-100):</label>
+            <input type="number" name="quality" id="quality" min="1" max="100" value="90" required><br>
+            
+            <button type="submit"><i class="bi bi-download"></i>Görseli İndir</button>
+        </form>
+        <footer>
+            <p>Buğra Mert Burtgil - Yusuf Diyar Kayır</p>
+            <p>Emrecan Kahveci - Kerem Yüksel</p>
+        </footer>
+    </div>
+</body>
+</html>
